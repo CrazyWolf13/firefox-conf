@@ -1,0 +1,43 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/Chameleons-Beauty */
+
+/* --------------- Íconos -------------------*/
+
+/* back button */
+
+#nav-bar #back-button image {    
+    list-style-image: url("../images/back.svg") !important;
+}
+
+/* forward - go button */
+
+#nav-bar #forward-button image {
+    list-style-image: url("../images/forward.svg") !important;
+    padding-inline-start: 5px !important;
+}
+
+/* Protection icon */
+
+#tracking-protection-icon-container, #page-action-buttons{
+  -moz-box-ordinal-group: 2 !important;
+}
+
+
+/* Protection icon */
+
+#tracking-protection-icon-container {
+    order: 2 !important;
+}
+
+
+/* read mode */
+
+#reader-mode-button > .urlbar-icon {
+    list-style-image: url("../images/read-mode.svg") !important;
+}
+
+/* Menu hamburger Logo */
+
+#PanelUI-menu-button {
+  list-style-image: url("../images/foxFill.svg") !important;
+}

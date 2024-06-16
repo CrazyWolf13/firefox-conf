@@ -1,0 +1,97 @@
+/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
+   https://github.com/Godiesc/Chameleons-Beauty */
+
+@media (prefers-color-scheme: dark){ :root{
+  --lwt-main-image:  url("../images/newtab/wallpaper-dark.png") !important;                     /* new-tab page image - dark theme */ 
+  --lwt-private-image:  url("../images/newtab/private-dark.png") !important;                    /*  new-tab private-page image - dark theme */
+  --brightness-wallpaper: transparent !important;                                               /* filtro para oscurecer la imagen */
+  }}
+  
+@media (prefers-color-scheme: light){ :root{
+  --lwt-main-image:  url("../images/newtab/wallpaper-light.png") !important;                    /* new-tab page image - white theme*/
+/*  --lwt-private-image:  url("../images/newtab/private-light.png") !important;                    new-tab private-page image - white theme*/ 
+  --brightness-wallpaper: transparent !important;                                               /* filtro para oscurecer la imagen */
+  }}
+
+:root{
+  
+  --fuchsia: #fa1e4e;     --blue:  #304af1;    --aqua: #00bfff;         --cyan: #00ffff;          --lightblue: #45a1ff;     --pink: #FF0F7E;
+  --purple: #8d35e2;      --green: #05b694;    --aquamarine: #00ffa2;   --lightgreen: #36ff4e;    --yellowbrown: #febd60;   --swampautumn: #fdf008;
+  --gray: #bfb6d2;        --orange: #ff6c22;   --yellow: #ffe20f;       --red: #ff3230;           --navyblue: #0050cE;      --poison: #cb17cf; 
+  
+  --general-color: var(--main-background-var);
+  
+  --personal-gradient-general: var(--main-background-var) !important;
+  
+  --personal-gradient-into-arrowpanels: var(--main-background-var) !important; 
+  
+  --wallpaper-size: cover;                                                                      /* cover-> default ; auto auto -> to <<main-image>> config */
+  --brightness-wallpaper: brightness(100%);                                                     /* 100% -> default ; 51% makes the wallpaper darker */
+  
+  --tab-height-personal: 32px ;                                                                 /* Tamaño altura de pestañas*/
+  --toolbar-height-personal: 34px ;                                                             /* Toolbar height */
+  
+  --logo-wordmark-visibility: 1 ;                                                               /* :1 visible, :0 invisible ; Logo-wordmark*/
+  --logo-wordmark-display: flex ;                                                               /* :none ->eliminar , :flex ->Mostrar;  Logo-wordmark*/
+  --searchbar-on-off: 1 ;                                                                       /* :1 visible, :0 invisible ; searchbar*/
+  --searchbar-display: flex ;                                                                   /* :none ->eliminar , :flex ->Mostrar; searchbar*/
+  
+  --newtab-pinnedsites-position-top: 0px ;                                                      /* Posición pinnedsites - top-> : 0px ; center-> : auto*/
+  
+  --newtab-pinnedsites-background: color-mix(in srgb, white 8%, transparent) ;                  /* color - fondo de sitios fijados y barra de búsqueda*/
+  
+  --selected-text-background: var(--general-color);                                             /* Selected text background */
+  
+  --personal-blur: blur(14px) ;                                                                 /* Utilizado para personalizar userContent.css */
+  
+  
+  /* Botones hover, clic */
+  
+  --button-bgcolor: color-mix(in srgb, var(--general-color)  20%, transparent) !important;              /* button background */
+  --button-hover-bgcolor: color-mix(in srgb, var(--general-color)  80%, transparent) !important;        /* button :hover background */
+  --button-active-bgcolor: color-mix(in srgb, var(--general-color)  90%, transparent) !important;       /* button :active background */
+
+
+
+  /* Custom from CrazyWolf13 */
+  --main-background-var: #087561;
+  --main-background-var-darkened: color-mix(in srgb, var(--main-background-var) 40%, transparent 60%);
+  --main-background-var-darkened2: color-mix(in srgb, var(--main-background-var) 40%, black 50%);
+  --main-background-var-lightened-strong: color-mix(in srgb, var(--main-background-var) 60%, black 40%);
+}
+
+:root[privatebrowsingmode="temporary"]{ --general-color: var(--purple) !important; }                    /* Accent color private mode */
+
+
+/* ---------------------------------------------------- -Main Image- Config ------------------------------------------------------ */
+
+@media (-moz-bool-pref:"firefoxchameleon.main-image") {
+
+   @media (prefers-color-scheme: dark){ :root{
+      --lwt-main-image:  url("../images/newtab/main-image-dark.png") !important;                        /* Main image - dark theme */ 
+      --brightness-wallpaper: #0000004b !important;                                                     /* Filtro oscuro */
+     }}
+   @media (prefers-color-scheme: light){ :root{
+      --lwt-main-image:  url("../images/newtab/main-image-light.png") !important;                       /* new-tab page image - dark theme */ 
+      --brightness-wallpaper: #ffffff4b !important;                                                     /* Filtro claro */
+     }}
+  
+  :root{
+      --wallpaper-size: auto auto;                                                                      /* cover-> default ; auto auto -> to <<main-image>> config */  
+      --background-align-y: -71px ;                                                                     /* Alinear new-tab wallpaper to <<main-image>> config 
+                                                                                                           -71px  ventana normal 
+                                                                                                           -101px con Barra de Marcadores */
+    }
+}
+  
+/* ----------------------------- -Main Image- + -One line- config or -Main Image- + -tree tabs- config ---------------------------- */
+
+@media ((-moz-bool-pref:"firefoxchameleon.main-image") and
+       (-moz-bool-pref:"firefoxchameleon.oneline")) or
+       ((-moz-bool-pref:"firefoxchameleon.main-image") and
+       (-moz-bool-pref:"firefoxchameleon.tree-tabs")){  
+    :root{
+      --background-align-y: -38px ;                                                                     /* Alinear new-tab wallpaper to <<main-image>> config 
+                                                                                                           -38px ventana normal
+                                                                                                           -68px con Barra de Marcadores  */
+    }}
