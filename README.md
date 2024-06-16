@@ -1,4 +1,4 @@
-### Firefox CSS Customization 🚀
+# Firefox CSS Customization 🚀
 This repository contains a series of CSS files that alter the appearance of Firefox. You can use these customizations to change the look of tabs, the homepage, and other elements of Firefox.
 
 ### Instructions 🛠️
