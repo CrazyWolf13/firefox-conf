@@ -49,3 +49,7 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 user_pref("privacy.userContext.longPressBehavior", 2);
+
+
+/* Enable unsigned extensions */
+user_pref("xpinstall.signatures.required");
