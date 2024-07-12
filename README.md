@@ -1,6 +1,9 @@
 # Firefox CSS Customization 🚀
 This repository contains a series of CSS files that alter the appearance of Firefox. You can use these customizations to change the look of tabs, the homepage, and other elements of Firefox.
 
+# Showcase
+![Showcase](./gh-assets/showcase.png)
+
 ### Instructions 🛠️
 
 1. **Enable User Customization in `about:config`**
